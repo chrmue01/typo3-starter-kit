@@ -1,0 +1,5 @@
+plugin.tx_einpolprovider.view {
+	templateRootPath = {$plugin.tx_einpolprovider.view.templateRootPath}
+	partialRootPath = {$plugin.tx_einpolprovider.view.partialRootPath}
+	layoutRootPath = {$plugin.tx_einpolprovider.view.layoutRootPath}
+}

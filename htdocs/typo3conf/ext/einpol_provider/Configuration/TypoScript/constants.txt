@@ -1,0 +1,5 @@
+plugin.tx_einpolprovider.view {
+	templateRootPath = EXT:einpol_provider/Resources/Private/Templates/
+	partialRootPath = EXT:einpol_provider/Resources/Private/Partials/
+	layoutRootPath = EXT:einpol_provider/Resources/Private/Layouts/
+}

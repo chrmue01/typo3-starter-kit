@@ -1,0 +1,27 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style path="{v:extension.path.relative(extensionName: 'einpol_provider')}/Resources/Public/styles/main.css" external="1" standalone="1" allowMoveToFooter="0"/>
+<v:asset.style path="{v:extension.path.relative(extensionName: 'einpol_provider')}/Resources/Public/styles/components/components.css" external="1" standalone="1" allowMoveToFooter="0"/>
+<v:asset.style path="{v:extension.path.relative(extensionName: 'einpol_provider')}/Resources/Public/styles/h5bp.css" external="1" standalone="1" allowMoveToFooter="0"/>
+<v:asset.script path="{v:extension.path.relative(extensionName: 'einpol_provider')}/Resources/Public/scripts/main.js" standalone="1" external="1" allowMoveToFooter="1"/>
+
+
+<header class="app-bar promote-layer">
+    <div class="app-bar-container">
+        <button class="menu"><img src="{v:extension.path.relative(extensionName: 'einpol_provider')}/Resources/Public/images/hamburger.svg"></button>
+        <h1 class="logo">TYPO3 Skeleton</h1>
+        <section class="app-bar-actions">
+            <!-- Put App Bar Buttons Here -->
+        </section>
+    </div>
+</header>
+
+<nav class="navdrawer-container promote-layer">
+    <h4>Navigation</h4>
+    <v:page.menu />
+</nav>
+
+<main>
+    <f:layout name="Page" />
+    <f:render section="Main" />
+</main>

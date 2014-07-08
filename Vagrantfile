@@ -39,10 +39,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "htdocs", "/home/vagrant/htdocs", type: "nfs"
-  config.vm.synced_folder "database", "/home/vagrant/database", type: "nfs"
-  config.vm.synced_folder "logs", "/home/vagrant/logs", type: "nfs"
-  config.vm.synced_folder "vendor", "/home/vagrant/vendor", type: "nfs"
+  if Vagrant::Util::Platform.windows?
+    config.vm.synced_folder "htdocs", "/home/vagrant/htdocs", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+    config.vm.synced_folder "logs", "/home/vagrant/logs", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+    config.vm.synced_folder "database", "/home/vagrant/database", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+    config.vm.synced_folder "vendor", "/home/vagrant/vendor", owner: "vagrant", group: "www-data", mount_options: ["dmode=775,fmode=664"]
+  else
+    config.vm.synced_folder "htdocs", "/home/vagrant/htdocs", type: "nfs"
+    config.vm.synced_folder "logs", "/home/vagrant/logs", type: "nfs"
+    config.vm.synced_folder "database", "/home/vagrant/database", type: "nfs"
+    config.vm.synced_folder "vendor", "/home/vagrant/vendor", type: "nfs"
+  end
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.

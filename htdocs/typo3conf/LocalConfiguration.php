@@ -7,7 +7,7 @@ return array(
 		'loginSecurityLevel' => 'rsa',
 	),
 	'DB' => array(
-		'database' => 'typo3-skeleton',
+		'database' => 'typo3-starter-kit',
 		'extTablesDefinitionScript' => 'extTables.php',
 		'host' => '127.0.0.1',
 		'password' => 'user',

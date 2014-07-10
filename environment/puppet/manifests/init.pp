@@ -34,10 +34,10 @@ class { "mysql":
 mysql::grant { 'typo3-skeleton':
   mysql_privileges => 'ALL',
   mysql_password => 'user',
-  mysql_db => 'typo3-skeleton',
+  mysql_db => 'typo3-starter-kit',
   mysql_user => 'user',
   mysql_host => '127.0.0.1',
-  mysql_db_init_query_file => '/home/vagrant/database/typo3-skeleton.sql',
+  mysql_db_init_query_file => '/home/vagrant/database/typo3-starter-kit.sql',
 }
 
 $phpModules = [ 'imagick', 'curl', 'mysql', 'cli', 'intl', 'mcrypt', 'memcache', 'gd' ]

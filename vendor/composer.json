@@ -1,0 +1,8 @@
+{
+    "config": {
+        "vendor-dir": "vendor/vendor"
+    },
+    "require": {
+        "typo3/cms": "~6.2"
+    }
+}

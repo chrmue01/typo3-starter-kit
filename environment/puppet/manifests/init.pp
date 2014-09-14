@@ -61,3 +61,7 @@ pear::package { "PHPUnit":
   repository => "pear.phpunit.de",
   require => Class['php'],
 }
+
+class { 'composer':
+  require   => Package['php'],
+}
